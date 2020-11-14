@@ -13,15 +13,15 @@ namespace ButonApp
 {
     public partial class Form1 : Form
     {
-        static int sonuc, sure = 30;
+        static int puan, sure = 30;
         static string path = "C:/ButonOyunuPuanlar.txt";
 
         Random rnd = new Random();
         public Form1()
         {
             InitializeComponent();
-            label1.Text = "Puan";
-            label2.Text = "Süre";
+            lblPuan.Text = "Puan";
+            lblSure.Text = "Süre";
 
 
         }
@@ -31,8 +31,8 @@ namespace ButonApp
             Button b = (Button)sender;
             b.Dispose();
 
-            sonuc += int.Parse(b.Text);
-            label1.Text = $" Puan = {sonuc}";
+            puan += int.Parse(b.Text);
+            lblPuan.Text = $" Puan = {puan}";
         }
 
         private void time_Tick(object sender, EventArgs e)
@@ -40,13 +40,13 @@ namespace ButonApp
             if (sure > 0)
             {
                 sure--;
-                label2.Text = "Süre: " + sure.ToString();
+                lblSure.Text = "Süre : " + sure.ToString();
             }
             else
             {
                 time.Stop();
                 game.Stop();
-                dynamic result = MessageBox.Show("Süre Bitti \nPuanınız: " + label1.Text + "\nYeniden Oynama İster Misiniz ?",
+                dynamic result = MessageBox.Show("Süre Bitti \nPuanınız: " + lblPuan.Text + "\nYeniden Oynama İster Misiniz ?",
                 "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
@@ -87,7 +87,7 @@ namespace ButonApp
         {
             FileStream fs = new FileStream(path, FileMode.Append, FileAccess.Write, FileShare.ReadWrite);
             StreamWriter sw = new StreamWriter(fs);
-            sw.WriteLine(DateTime.Now + " " + "Puan: " + sonuc);
+            sw.WriteLine(DateTime.Now + " " + "Puan: " + puan);
             fs.Flush();
             sw.Close();
             fs.Close();

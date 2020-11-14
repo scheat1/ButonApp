@@ -32,8 +32,8 @@
             this.time = new System.Windows.Forms.Timer(this.components);
             this.game = new System.Windows.Forms.Timer(this.components);
             this.pnlPuan = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblSure = new System.Windows.Forms.Label();
+            this.lblPuan = new System.Windows.Forms.Label();
             this.pnlPuan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,31 +49,29 @@
             // 
             // pnlPuan
             // 
-            this.pnlPuan.Controls.Add(this.label2);
-            this.pnlPuan.Controls.Add(this.label1);
+            this.pnlPuan.Controls.Add(this.lblSure);
+            this.pnlPuan.Controls.Add(this.lblPuan);
             this.pnlPuan.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlPuan.Location = new System.Drawing.Point(939, 0);
             this.pnlPuan.Name = "pnlPuan";
             this.pnlPuan.Size = new System.Drawing.Size(120, 554);
             this.pnlPuan.TabIndex = 0;
             // 
-            // label2
+            // lblSure
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 114);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.lblSure.AutoSize = true;
+            this.lblSure.Location = new System.Drawing.Point(6, 114);
+            this.lblSure.Name = "lblSure";
+            this.lblSure.Size = new System.Drawing.Size(0, 17);
+            this.lblSure.TabIndex = 1;
             // 
-            // label1
+            // lblPuan
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.lblPuan.AutoSize = true;
+            this.lblPuan.Location = new System.Drawing.Point(3, 27);
+            this.lblPuan.Name = "lblPuan";
+            this.lblPuan.Size = new System.Drawing.Size(0, 17);
+            this.lblPuan.TabIndex = 0;
             // 
             // Form1
             // 
@@ -95,8 +93,8 @@
         private System.Windows.Forms.Timer time;
         private System.Windows.Forms.Timer game;
         private System.Windows.Forms.Panel pnlPuan;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSure;
+        private System.Windows.Forms.Label lblPuan;
     }
 }
 
